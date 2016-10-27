@@ -19,3 +19,7 @@ for stars in range(1, 4):
         if r['michelin_stars'] == str(stars)
     ])
     pprint(dict(star_restaurants_by_country))
+
+print("Count American restaurants by city")
+american_restaurants_by_city = Counter([r['city'] for r in restaurants if r['country'] == 'USA'])
+pprint(dict(american_restaurants_by_city))
